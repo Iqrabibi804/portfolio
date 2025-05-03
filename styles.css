@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iqra Bibi - Portfolio</title>
+    <style>
+        /* Previous CSS remains the same, add these new styles */
+        
+        /* New About Section Styles */
+        #about {
+            position: relative;
+            overflow: hidden;
+            padding: 6rem 4rem;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+        }
+        
+        .about-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.1;
+            z-index: 0;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="%232c3e50" d="M30,30 Q50,10 70,30 T90,50 Q70,70 50,90 T30,70 Q10,50 30,30 Z"/></svg>');
+            background-size: 30%;
+            background-repeat: repeat;
+        }
+        
+        .about-container {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .about-content {
+            flex: 1;
+        }
+        
+        .about-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .about-header h1 {
+            font-size: 2.8rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .about-header h1::before,
+        .about-header h1::after {
+            content: '✨';
+            display: inline-block;
+            margin: 0 10px;
+            font-size: 1.5rem;
+        }
+        
+        .about-text {
+            margin-bottom: 2.5rem;
+        }
+        
+        .about-text p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cv-download {
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
+        .cv-btn {
+            display: inline-flex;
+            align-items: center;
+            background: #3498db;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+        }
+        
+        .cv-btn:hover {
+            background: #2980b9;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(52, 152, 219, 0.4);
+        }
+        
+        .cv-btn i {
+            margin-right: 0.8rem;
+            font-size: 1.2rem;
+        }
+        
+        .about-image {
+            flex: 1;
+            text-align: center;
+            position: relative;
+        }
+        
+        .about-image img {
+            max-width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            border: 5px solid white;
+        }
+        
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 150px;
+            height: 150px;
+            background: rgba(52, 152, 219, 0.1);
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            z-index: -1;
+        }
+        
+        .about-image::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            width: 100px;
+            height: 100px;
+            background: rgba(46, 204, 113, 0.1);
+            border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
+            z-index: -1;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .about-container {
+                flex-direction: column;
+                padding: 2rem;
+            }
+            
+            .about-image {
+                margin-bottom: 2rem;
+            }
+            
+            .about-image::before,
+            .about-image::after {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Previous HTML remains the same until About section -->
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="about-background"></div>
+        <div class="about-container">
+            <div class="about-image">
+                <img src="your-about-pic.jpg" alt="Iqra Bibi">
+            </div>
+            <div class="about-content">
+                <div class="about-header">
+                    <h1>About Me</h1>
+                </div>
+                <div class="about-text">
+                    <p>Hello, I'm Iqra Bibi — a Software Engineering student with a deep passion for turning ideas into impactful digital solutions. My journey revolves around constant learning, problem-solving, and creating software that makes a difference.</p>
+                    
+                    <p>Through my academic and personal projects, I've had the opportunity to explore the vast world of programming, from developing dynamic web applications to mastering different coding languages. I'm always excited to dive into new challenges and bring creative, innovative solutions to life.</p>
+                    
+                    <p>Feel free to check out my CV to get a detailed look at my journey, skills, and accomplishments. Let's build something extraordinary together!</p>
+                </div>
+                <div class="cv-download">
+                    <a href="resume-iqrabibi.pdf" class="cv-btn" download>
+                        <i class="fas fa-download"></i> Download My CV
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rest of your HTML remains the same -->
+</body>
+</html>
